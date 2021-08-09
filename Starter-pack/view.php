@@ -28,8 +28,6 @@
             </div>
         </fieldset>
 		<button type="submit" class="btn btn-primary">Allez-y les enfants!</button>
-	<!--TODO : Create input Field for user to type translation-->
-	<!--TODO : Add Submit Field (no button right ? )-->
 	</div>
 </body>
 </html>

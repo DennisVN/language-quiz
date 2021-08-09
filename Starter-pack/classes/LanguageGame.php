@@ -7,6 +7,7 @@ class LanguageGame
     public function __construct()
     {
         // :: is used for static functions
+        var_dump(Data::words());
         // They can be called without an instance of that class being created
         // and are used mostly for more *static* types of data (a fixed set of translations in this case)
         foreach (Data::words() as $frenchTranslation => $englishTranslation) {
