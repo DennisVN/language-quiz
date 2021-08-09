@@ -10,11 +10,12 @@ class LanguageGame
         // They can be called without an instance of that class being created
         // and are used mostly for more *static* types of data (a fixed set of translations in this case)
                                     //key v                   value v
+        $this->words = [];
         foreach (Data::words() as $frenchTranslation => $englishTranslation) {
             // TODO: create instances of the Word class to be added to the words array -> use new keyword
             $word = new Word($frenchTranslation, $englishTranslation);
-            var_dump($this->word);
-            array_push($this->$words, $word);
+            var_dump($word);
+            array_push($this->words, $word);
 
             //$this->frenchTranslation = $frenchTranslation;
             //$this->englishTranslation = $englishTranslation;
@@ -25,8 +26,7 @@ class LanguageGame
 
     public function run()
     {   
-        $random = $this->$word;
-        $this->$words[array_rand($this->$words)];
+        $randomWord = $this->words[array_rand($this->words , 1)];
         //$items = array(1, 2, 3, 4, 5);
         //echo $items[array_rand($items)];
         //var_dump(Data::words());
