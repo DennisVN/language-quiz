@@ -12,9 +12,9 @@ class LanguageGame
                                     //key v                   value v
         foreach (Data::words() as $frenchTranslation => $englishTranslation) {
             // TODO: create instances of the Word class to be added to the words array -> use new keyword
-            $word = new word($frenchTranslation, $englishTranslation);
+            $word = new Word($frenchTranslation, $englishTranslation);
             var_dump($this->word);
-            var_dump($this->$words, $word);
+            array_push($this->$words, $word);
 
             //$this->frenchTranslation = $frenchTranslation;
             //$this->englishTranslation = $englishTranslation;
@@ -22,16 +22,13 @@ class LanguageGame
             // if french -> $words // else english -> $answer
         }
     }
-    public function getTranslation()
-        {
-           /*$eng = $this->englishTranslation;
-           $fre = $this->frenchTranslation;
-           return $eng;
-           return $fre;*/
-        }
 
     public function run()
-    {
+    {   
+        $random = $this->$word;
+        $this->$words[array_rand($this->$words)];
+        //$items = array(1, 2, 3, 4, 5);
+        //echo $items[array_rand($items)];
         //var_dump(Data::words());
         // TODO: check for option A or B
 
