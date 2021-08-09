@@ -17,5 +17,6 @@ require_once 'classes/Word.php';
 // Start the game
 $game = new LanguageGame();
 $game->run();
+echo "ik werk";
 
 require 'view.php';
