@@ -19,11 +19,11 @@
             <div class="form-row" >
                 <div class="form-group col-md-6">
                     <label for="street">Translate following word:</label>
-                    <input type="text" name="street" id="street" class="form-control" value="<?php echo isset($_POST["street"]) ? $_POST["street"] : ''; ?>">
+                    <input type="text" name="word" id="word" class="form-control" value="<?php echo isset($_POST["street"]) ? $_POST["street"] : ''; ?>">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="streetnumber">Your Translation : </label>
-                    <input type="text" id="streetnumber" name="streetnumber" class="form-control" value="<?php echo isset($_POST["streetnumber"]) ? $_POST["streetnumber"] : ''; ?>">
+                    <input type="text" id="translation" name="translation" class="form-control" value="<?php echo isset($_POST["streetnumber"]) ? $_POST["streetnumber"] : ''; ?>">
                 </div>
             </div>
         </fieldset>
