@@ -15,15 +15,15 @@ class Data
             'biscuit' => 'cookie',
         ];
     }
-    public function setLanguage(string $french, string $english)
+    /*public function setLanguage(string $french, string $english)
     {
         $this->french = $french;
         $this->english = $english;
-    }
-    public function getLanguage()
+    }*/
+    /*public function getLanguage()
     {
         return $this->french;
         return $this->english;
-    }
+    }*/
     
 }

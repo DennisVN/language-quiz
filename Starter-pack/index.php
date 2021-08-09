@@ -35,7 +35,4 @@ require_once 'classes/Word.php';
 $game = new LanguageGame();
 $game->run();
 
-echo Data::words();
-
-
 require 'view.php';
