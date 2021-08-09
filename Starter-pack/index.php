@@ -17,6 +17,8 @@ require_once 'classes/Word.php';
 // Start the game
 $game = new LanguageGame();
 $game->run();
+// TODO : Create field that displays random word
 echo "ik werk";
-
+// TODO : Create input Field for user to type translation
+// TODO : Add Submit Field (no button right ? )
 require 'view.php';
