@@ -22,8 +22,10 @@ class LanguageGame
 
     public function run()
     {   
+        session_start();
         // TODO: check for option A or B
         // if post translate == answer then score, else faulty 
+        
 
         // Option A: user visits site first time (or wants a new word)
         // TODO: select a random word for the user to translate
@@ -31,10 +33,11 @@ class LanguageGame
         //var_dump($this->randomWord->word);
         //var_dump($this->randomWord->answer);
         //var_dump($randomWord->answer);
-        $_SESSION['translate'] = $this->randomWord;
+        $_SESSION["translate"] = $this->randomWord;
         // Option B: user has just submitted an answer
         // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
         $playerGuess = $_POST["translation"];
         // TODO: generate a message for the user that can be shown
+
     }
 }

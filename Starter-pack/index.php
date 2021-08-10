@@ -32,7 +32,9 @@ require_once 'classes/Word.php';
 require_once 'classes/LanguageGame.php';
 
 // Start the game
+session_start();
 $game = new LanguageGame();
 $game->run();
+
 
 require 'view.php';
