@@ -12,22 +12,22 @@
 </head>
 <body >
 	<div class="container">
-	<!-- TODO : Create field that displays random word -->
-	<fieldset>
-            <legend>Player</legend>
-
-            <div class="form-row" >
-                <div class="form-group col-md-6">
-                    <label for="street">Translate following word:</label>
-                    <input type="text" name="word" id="word" class="form-control" value="<?php echo "Generated word here"; ?>">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="streetnumber">Your Translation : </label>
-                    <input type="text" id="translation" name="translation" class="form-control" value="<?php echo "User input() here"; ?>">
-                </div>
-            </div>
-        </fieldset>
-		<button type="submit" class="btn btn-primary">Allez-y les enfants!</button>
+		<form method ="post">
+			<fieldset>
+				<legend>Player</legend>
+				<div class="form-row" >
+					<div class="form-group col-md-6">
+						<label for="word">Translate : </label>
+						<input type="text" name="Translate" id="Translate" class="form-control" value="<?= $game->randomWord->word ?>">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="translation">Your Translation : </label>
+						<input type="text" id="translation" name="translation" class="form-control" value="<?php echo "User input() here"; ?>">
+					</div>
+				</div>
+				<button type="submit" name="submit" class="btn btn-primary">Allez-y les enfants!</button>
+			</fieldset>
+		</form>
 	</div>
 </body>
 </html>

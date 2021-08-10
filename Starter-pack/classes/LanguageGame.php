@@ -3,6 +3,7 @@
 class LanguageGame
 {
     private array $words;
+    public Word $randomWord;
 
     public function __construct()
     {
@@ -13,8 +14,9 @@ class LanguageGame
         foreach (Data::words() as $frenchTranslation => $englishTranslation) {
             // TODO: create instances of the Word class to be added to the words array -> use new keyword
             $word = new Word($frenchTranslation, $englishTranslation);
-            var_dump($word);
             array_push($this->words, $word);
+            //var_dump($word);
+            //var_dump($word->word);
         }
     }
 
@@ -24,10 +26,13 @@ class LanguageGame
 
         // Option A: user visits site first time (or wants a new word)
         // TODO: select a random word for the user to translate
-        $randomWord = $this->words[array_rand($this->words , 1)];
+        $this->randomWord = $this->words[array_rand($this->words , 1)];
+        var_dump($this->randomWord->word);
+        var_dump($this->randomWord->answer);
+        //var_dump($randomWord->answer);
+        //$_SESSION['translate'] = $this->randomWord;
         // Option B: user has just submitted an answer
         // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
         // TODO: generate a message for the user that can be shown
-
     }
 }
