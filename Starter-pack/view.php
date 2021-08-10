@@ -17,8 +17,8 @@
 				<legend>Player</legend>
 				<div class="form-row" >
 					<div class="form-group col-md-6">
-						<label for="word">Translate : </label>
-						<input type="text" name="Translate" id="Translate" class="form-control" value="<?= $game->randomWord->word ?>">
+						<label for="translate">Translate : </label>
+						<input type="text" name="translate" id="translate" class="form-control" value="<?= $game->randomWord->word ?>">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="translation">Your Translation : </label>
@@ -26,6 +26,8 @@
 					</div>
 				</div>
 				<button type="submit" name="submit" class="btn btn-primary">Allez-y les enfants!</button>
+				<p class="Answer"> Your answer is -declare result here-</p>
+				<p class ="Score"> Your current score : -tag score here-</p>
 			</fieldset>
 		</form>
 	</div>

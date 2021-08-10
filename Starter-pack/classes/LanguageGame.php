@@ -27,8 +27,8 @@ class LanguageGame
         // Option A: user visits site first time (or wants a new word)
         // TODO: select a random word for the user to translate
         $this->randomWord = $this->words[array_rand($this->words , 1)];
-        var_dump($this->randomWord->word);
-        var_dump($this->randomWord->answer);
+        //var_dump($this->randomWord->word);
+        //var_dump($this->randomWord->answer);
         //var_dump($randomWord->answer);
         //$_SESSION['translate'] = $this->randomWord;
         // Option B: user has just submitted an answer
