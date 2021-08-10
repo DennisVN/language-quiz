@@ -4,6 +4,7 @@ class LanguageGame
 {
     private array $words;
     public Word $randomWord;
+    public string $message = "";
 
     public function __construct()
     {
@@ -35,7 +36,12 @@ class LanguageGame
         // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
         $playerGuess = $_POST["translation"];
         echo($playerGuess);
-        // TODO: generate a message for the user that can be shown
 
+        if ( $randomWord->verify($playerGuess) === true ) {
+            $this->message = "Your answer <p>\"{$playerGuess}\"</p> is très bien ! " ;
+        } else {
+            $this->message = "Your Answer <p>\"{$playerGuess}\"</p> n'est pas that good ." ;
+        }
+        // TODO: generate a message for the user that can be shown
     }
 }

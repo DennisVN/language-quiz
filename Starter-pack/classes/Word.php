@@ -11,10 +11,10 @@ class Word
         $this->answer=$answer;
     }
 
-    public function verify(string $playerGuess)
+    public function verify(string $playerGuess, string $answer)
     {   
         // TODO: use this function to verify if the provided answer by the user matches the correct one
-        if ($playerGuess == $this->answer){
+        if ($playerGuess === $this->answer){
             return true;
         } else {
             return false;
