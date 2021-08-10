@@ -8,6 +8,7 @@ declare(strict_types = 1);
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
+session_start();
 
 // Debug tools :
 function whatIsHappening()
@@ -32,9 +33,9 @@ require_once 'classes/Word.php';
 require_once 'classes/LanguageGame.php';
 
 // Start the game
-session_start();
 $game = new LanguageGame();
 $game->run();
 
+session_destroy();
 
 require 'view.php';
