@@ -9,7 +9,7 @@ class Player
     public function __construct()
     {
         // TODO: add 👤 automatically to their name
-        //$this->name = $name;
+        //$this->name = "👤" . $name;
         //$this->price = $price;
     }
 }
