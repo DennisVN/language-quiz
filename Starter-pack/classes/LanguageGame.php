@@ -18,7 +18,9 @@ class LanguageGame
             array_push($this->words, $word);
 
         }
+        var_dump('<pre>');
         var_dump($this->words);
+        var_dump('<pre>'); 
     }
 
     public function run()
