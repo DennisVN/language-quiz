@@ -47,8 +47,10 @@ class LanguageGame
         // TODO : MESSAGE
         if ($userWasRight){
             $this->message = "just";
+            $_SESSION["score"] += 1;
         } else {
             $this->message = "domme mutn keirl";
+            $_SESSION["score"] -= 1;
         }
         
     }
