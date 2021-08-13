@@ -26,8 +26,8 @@
 					</div>
 				</div>
 				<button type="submit" name="submit" class="btn btn-primary">Allez-y les enfants!</button>
-				<p class="Answer"> Your answer is -declare result here-</p>
-				<p class ="Score"> Your current score : -tag score here-</p>
+				<p class="Answer"> <?php echo"Your Guess :" . $_POST["translation"]; ?></p>
+				<p class ="Score">Your current score : -tag score here-</p>
 			</fieldset>
 		</form>
 	</div>
