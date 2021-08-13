@@ -16,15 +16,12 @@ class LanguageGame
             // TODO: create instances of the Word class to be added to the words array -> use new keyword
             $word = new Word($frenchTranslation, $englishTranslation);
             array_push($this->words, $word);
-            //var_dump($word);
-            //var_dump($word->word);
         }
     }
 
     public function run()
     {   
         // TODO: check for option A or B
-        // if post translate == answer then score, else faulty 
         // Option A: user visits site first time (or wants a new word)
         // TODO: select a random word for the user to translate
         $this->randomWord = $this->words[array_rand($this->words , 1)];
