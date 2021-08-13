@@ -24,10 +24,24 @@ class LanguageGame
         // TODO: check for option A or B
         $formSubmitted = !empty($_POST);
         if (!$formSubmitted){
-            $this->selectedWord = $this->selectRandomWord();
+            $this->prepare();
         } else {
-           die('option B'); 
+           $this->handleUserGuess();
         }
+    }
+
+    private function prepare(): void
+    {
+        $this->selectedWord = $this->selectRandomWord();
+        $_SESSION['selectedWord'] = serialize($this->selectedWord);
+    }
+    private function handleUserGuess(): void
+    {
+        // TODO : VERIFY
+        $this->selectedWord = unserialize($_SESSION['selectedWord']);
+        $result = $this->selectedWord->verify($_POST['user_guess']);
+        var_dump($result);
+        // TODO : MESSAGE
     }
 
     private function selectRandomWord(): Word
