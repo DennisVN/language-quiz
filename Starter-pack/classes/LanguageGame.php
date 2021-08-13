@@ -4,7 +4,7 @@ class LanguageGame
 {
     private array $words;
     public Word $selectedWord;
-    public string $message = "";
+    public string $message;
 
     public function __construct()
     {
@@ -39,9 +39,15 @@ class LanguageGame
     {
         // TODO : VERIFY
         $this->selectedWord = unserialize($_SESSION['selectedWord']);
-        $result = $this->selectedWord->verify($_POST['user_guess']);
-        var_dump($result);
+        $userWasRight = $this->selectedWord->verify($_POST['user_guess']);
+        var_dump($userWasRight);
         // TODO : MESSAGE
+        if ($userWasRight){
+            $this->message = "just";
+        } else {
+            $this->message = "domme mutn keirl";
+        }
+        
     }
 
     private function selectRandomWord(): Word

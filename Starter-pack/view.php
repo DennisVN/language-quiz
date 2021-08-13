@@ -25,8 +25,10 @@
 						<input type="text" id="submit" name="submit" class="form-control" value="<?php echo "User input() here"; ?>">
 					</div>
 				</div>
-				<button type="submit" name="playerGuess" class="btn btn-primary">Allez-y les enfants!</button>
-				<p class="Answer"> <?php echo"Your Guess : WIP"?></p>
+				<button type="submit" name="submit" class="btn btn-primary">Allez-y les enfants!</button>
+				<?php if (!empty($game->message)) : ?>
+					<p> <?= $game->message ?></p>
+				<?php endif; ?>
 				<p class ="Score">Your current score : -tag score here-</p>
 			</fieldset>
 		</form>
