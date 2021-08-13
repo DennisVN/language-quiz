@@ -25,6 +25,8 @@ class LanguageGame
         $formSubmitted = !empty($_POST);
         if (!$formSubmitted){
             $this->selectedWord = $this->selectRandomWord();
+        } else {
+           die('option B'); 
         }
     }
 
@@ -33,12 +35,6 @@ class LanguageGame
 
         $randomIndex = array_rand($this->words, 1);
         return $this->words[$randomIndex];
-    }
-
-    private function gameSetup()
-    {   
-        // Option A: user visits site first time (or wants a new word)
-        // TODO: select a random word for the user to translate
     }
 
 }
