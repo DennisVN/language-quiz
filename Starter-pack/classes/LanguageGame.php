@@ -16,7 +16,9 @@ class LanguageGame
             // TODO: create instances of the Word class to be added to the words array -> use new keyword
             $word = new Word($frenchTranslation, $englishTranslation);
             array_push($this->words, $word);
+
         }
+        var_dump($this->words);
     }
 
     public function run()

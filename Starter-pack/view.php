@@ -25,8 +25,8 @@
 						<input type="text" id="translation" name="translation" class="form-control" value="<?php echo "User input() here"; ?>">
 					</div>
 				</div>
-				<button type="submit" name="submit" class="btn btn-primary">Allez-y les enfants!</button>
-				<p class="Answer"> <?php echo"Your Guess :" . $_POST["translation"]; ?></p>
+				<button type="submit" name="playerGuess" class="btn btn-primary">Allez-y les enfants!</button>
+				<p class="Answer"> <?php echo"Your Guess : WIP"?></p>
 				<p class ="Score">Your current score : -tag score here-</p>
 			</fieldset>
 		</form>
