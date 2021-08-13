@@ -29,7 +29,8 @@
 				<?php if (!empty($game->message)) : ?>
 					<p> <?= $game->message ?></p>
 				<?php endif; ?>
-				<p class ="Score">Your current score : -tag score here-</p>
+				<p class ="Score">Your current score : <b> <?= $_SESSION['score'] ?></b> </p>
+				<button type="submit" name="reset" class="btn btn-primary col-sm-2">encore une fois</button>
 			</fieldset>
 		</form>
 	</div>

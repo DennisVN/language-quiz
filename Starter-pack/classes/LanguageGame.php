@@ -21,6 +21,9 @@ class LanguageGame
 
     public function run()
     {   
+        if ((!$_SESSION) || (isset($_POST["reset"]))){
+            $_SESSION["score"] = 0;
+        }
         // TODO: check for option A or B
         $formSubmitted = !empty($_POST);
         if (!$formSubmitted){
