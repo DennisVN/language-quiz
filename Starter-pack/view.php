@@ -17,12 +17,12 @@
 				<legend>Player</legend>
 				<div class="form-row" >
 					<div class="form-group col-md-6">
-						<label for="translate">Translate : </label>
-						<input type="text" name="translate" id="translate" class="form-control" value="<?= $game->randomWord->word ?>">
+						<label for="user_guess">Translate : </label>
+						<input type="text" name="user_guess" id="user_guess" class="form-control" value="<?= $game->selectedWord->frenchWord ?>">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="translation">Your Translation : </label>
-						<input type="text" id="translation" name="translation" class="form-control" value="<?php echo "User input() here"; ?>">
+						<input type="text" id="submit" name="submit" class="form-control" value="<?php echo "User input() here"; ?>">
 					</div>
 				</div>
 				<button type="submit" name="playerGuess" class="btn btn-primary">Allez-y les enfants!</button>
