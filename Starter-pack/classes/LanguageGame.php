@@ -37,11 +37,11 @@ class LanguageGame
         $playerGuess = $_POST["translation"];
         echo($playerGuess);
 
-        if ( $randomWord->verify($playerGuess) === true ) {
+        /*if ( $randomWord->verify($playerGuess) === true ) {
             $this->message = "Your answer <p>\"{$playerGuess}\"</p> is très bien ! " ;
         } else {
             $this->message = "Your Answer <p>\"{$playerGuess}\"</p> n'est pas that good ." ;
-        }
+        }*/
         // TODO: generate a message for the user that can be shown
     }
 }
